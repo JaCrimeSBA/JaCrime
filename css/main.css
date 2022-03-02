@@ -1536,11 +1536,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
      bottom: 25px;
  }
  #logo-foot{
-     position: absolute;
+    
+   margin-left:3vw;
 
-    top:calc((100vw*4));
-    left: 48vw; 
- }
+}
  #foot{
      padding-left: 25vw;
  }
