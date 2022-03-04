@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>JaCrime</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="glint\icons8-prison-building-50.ico" type="image/x-icon">
+    <link rel="icon" href="glint\icons8-prison-building-50.ico" type="image/x-icon">
+    
+    <style>
+      
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <h1 style="color: beige; width: 500px;">JaCrime </h1>
+            </a>
+            <a href="index.html"class="svg">    
+                <svg class="logo-cuff" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M85.87906,3.44c-0.72811,0.02595 -1.42917,0.28238 -2.00219,0.73234l-68.66562,53.74328l-10.45437,8.17672c-0.96771,0.7584 -1.45721,1.97553 -1.28407,3.19276c0.17315,1.21723 0.98263,2.24958 2.12344,2.70805c1.14081,0.45847 2.43956,0.27339 3.40688,-0.4855l4.75687,-3.72219v90.45453c0.00019,1.89978 1.54022,3.43981 3.44,3.44h137.6c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-90.45453l4.75687,3.72219c0.96733,0.75884 2.26605,0.94389 3.40682,0.48541c1.14077,-0.45847 1.95024,-1.4908 2.1234,-2.708c0.17316,-1.2172 -0.3163,-2.43431 -1.28396,-3.19273l-10.26625,-8.02891l-68.85375,-53.89109c-0.63824,-0.50113 -1.43308,-0.76052 -2.24406,-0.73234zM86,11.24719l65.36,51.14984v92.40297h-130.72v-92.40297zM61.92,51.6c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM72.24,51.6c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM82.56,55.04c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM55.04,58.48c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM105.00735,59.74313l-19.46422,19.46422l10.15875,10.15875c-1.53711,7.22482 0.24987,14.84318 5.65047,20.24359c8.82297,8.82266 23.57594,8.04953 32.84125,-1.21609c9.26531,-9.26563 10.03907,-24.01187 1.21609,-32.83453c-5.4006,-5.40041 -13.01883,-7.19455 -20.24359,-5.65719zM89.44,61.92c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM55.04,68.8c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM100.14297,70.90297c0.88021,-0.00043 1.76139,0.33529 2.43219,1.00781c1.34137,1.33794 1.34078,3.50505 0.00672,4.85094c-0.00333,0.00333 -0.0101,0.01011 -0.01344,0.01344c-0.00345,0.00345 -0.00327,0.00999 -0.00672,0.01344c-1.34609,1.33134 -3.5139,1.32702 -4.85094,-0.01344c-1.34504,-1.34504 -1.34504,-3.52277 0,-4.86437c0.67252,-0.6708 1.55198,-1.00738 2.43219,-1.00781zM119.325,76.22422c4.17581,-0.19153 8.24295,1.22196 11.22031,4.19922c5.95473,5.95452 5.63917,16.25027 -1.2161,23.10578c-6.85527,6.8555 -17.15777,7.17061 -23.1125,1.2161c-5.95472,-5.95452 -5.63917,-16.25028 1.2161,-23.10578c3.42763,-3.42775 7.71638,-5.22378 11.89219,-5.41531zM58.48,79.12c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM44.72,89.44v14.36469c-6.19678,4.02158 -10.32,10.67704 -10.32,18.31531c0,12.47735 10.97665,22.36 24.08,22.36c13.10335,0 24.08,-9.88265 24.08,-22.36c0,-7.63827 -4.12322,-14.29374 -10.32,-18.31531v-14.36469zM58.48,92.88c1.89888,0 3.44,1.54112 3.44,3.44c0,1.89888 -1.54112,3.44 -3.44,3.44c-1.89888,0 -3.44,-1.54112 -3.44,-3.44c0,-1.89888 1.54112,-3.44 3.44,-3.44zM58.48,106.64c9.69498,0 17.2,7.05889 17.2,15.48c0,8.42111 -7.50502,15.48 -17.2,15.48c-9.69498,0 -17.2,-7.05889 -17.2,-15.48c0,-8.42111 7.50502,-15.48 17.2,-15.48z"></path></g></g></svg></a>
+                                
+        </div>
+
+        
+
+      
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome to JaCrime</h3>
+
+                <h1>
+                    We are a justice inclined group <br>
+                    of people who analyze <br>
+                    and present crime related data <br>
+                    to aid in optimising for justice.
+                </h1>
+
+                <div class="home-content__buttons">
+                    <h2 style="color: #fff;">Contact us</h2>
+                    <a href="tel:876-410-0394" target="_blank">
+                        <button class="contactbutton">Call</button>
+                    </a>
+                    <a href="malito:bora.xo@gmail.com" >
+                        <button class="contactbutton">Email</button>
+                    </a>
+                </div>
+                
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section style="color: #fff;"id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark" style="color: #fff;">Hello There</h3>
+                <h1 class="display-1 display-1--light"></h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <h2 style="color: #fff;">
+                The following data is the data amassed over the 2017-2019 period. The data is composed of the sum of three areas in each parish
+                </h2>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div style="color: #fff;" class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col ">
+                <h3>Most Crimes<br> Committed</h3>
+                <h1>St. James</h1>
+            </div>
+            <div  class="col-block stats__col">
+                <h3>Most <br> Fatalities</h3>
+                <h1>Kingston</h1>
+            </div>
+            <div class="col-block stats__col">
+                <h3>Most <br>Crimes Solved</h3>
+                <h1>Clarendon</h1>
+            </div>
+            <div class="col-block stats__col">
+                <h3>Most Common<br> Type of Crime</h3>
+                <h1>Robbery</h1> 
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- Parishes
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div id="bridge-class"class="col-full">
+                
+                <h1 id="bridge"class="display-2">The Following Is The Highest Crime Related Data from Each Parish</h1>
+            </div>
+        </div> <!-- end section-header -->
+        <!--animation box fall-->
+        <div class="animation-area">
+			<ul class="box-area">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+        <div class="row services-list block-1-2 block-tab-full">
+
+            <div style="padding-bottom: 60px;"class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Talawah | St. Mary </h3>
+                    <h5>Crimes Commited: 543</h5><hr>
+                    <h5>Fatalities: 67</h5><hr>
+                    <h5>Crimes Solved: 49</h5>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Descan | St. Ann</h3>
+                    <h5>Crimes Commited: 543 </h5><hr>
+                    <h5>Fatalities: 79</h5><hr>
+                    <h5>Crimes Solved: 67</h5>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                
+                <div class="service-text">
+                    <h3 class="h2">Batter | Trelawny</h3>
+                    <h5>Crimes Commited: 876 </h5><hr>
+                    <h5>Fatalities: 546</h5><hr>
+                    <h5>Crimes Solved: 78</h5>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Suarez | Portland</h3>
+                    <h5>Crimes Commited: 563 </h5><hr>
+                    <h5>Fatalities: 467</h5><hr>
+                    <h5>Crimes Solved: 463</h5>
+                </div>
+            </div>
+
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                
+                <div class="service-text">
+                    <h3 class="h2">Mandel | Manchester</h3>
+                    <h5>Crimes Commited: 542 </h5><hr>
+                    <h5>Fatalities: 422</h5><hr>
+                    <h5>Crimes Solved: 68</h5>
+                </div>
+            </div>
+    
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Sarah | Clarendon</h3>
+                    <h5>Crimes Commited: 657 </h5><hr>
+                    <h5>Fatalities: 473</h5><hr>
+                    <h5>Crimes Solved: 325</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Sindicate | Hanover</h3>
+                    <h5>Crimes Commited: 643 </h5><hr>
+                    <h5>Fatalities: 543</h5><hr>
+                    <h5>Crimes Solved: 42</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Spanish Town | St. Catherine</h3>
+                    <h5>Crimes Commited: 274 </h5><hr>
+                    <h5>Fatalities: 122</h5><hr>
+                    <h5>Crimes Solved: 98</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Black River | St. Elizabeth</h3>
+                    <h5>Crimes Commited: 653 </h5><hr>
+                    <h5>Fatalities: 213</h5><hr>
+                    <h5>Crimes Solved: 254</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Poland Bay | St. Thomas</h3>
+                    <h5>Crimes Commited: 978 </h5><hr>
+                    <h5>Fatalities: 420</h5><hr>
+                    <h5>Crimes Solved: 69</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Terio | Westmoreland</h3>
+                    <h5>Crimes Commited: 234 </h5><hr>
+                    <h5>Fatalities: 12</h5><hr>
+                    <h5>Crimes Solved: 89</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Pestos | St. Andrew</h3>
+                    <h5>Crimes Commited: 642 </h5><hr>
+                    <h5>Fatalities: 543</h5><hr>
+                    <h5>Crimes Solved: 123</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Catherine Hall | St. James</h3>
+                    <h5>Crimes Commited: 964 </h5><hr>
+                    <h5>Fatalities: 564</h5><hr>
+                    <h5>Crimes Solved: 287</h5>
+                    
+                </div>
+            </div>
+            <div style="padding-bottom: 60px;" class="col-block service-item" data-aos="fade-up">
+                <div class="service-text">
+                    <h3 class="h2">Backal | Kingston</h3>
+                    <h5>Crimes Commited: 798 </h5><hr>
+                    <h5>Fatalities: 654</h5><hr>
+                    <h5>Crimes Solved: 344</h5>
+                    
+                </div>
+            </div>
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+
+   
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out and tell us about crimes or Just say Hello</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+            
+            <div class="contact-primary">
+
+                <h3 class="h6">Send Us A Message</h3>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            23 Piper Rd.<br>
+                            Mountain View, Kingston<br>
+                            
+                        </p>
+                    </div>
+
+                    
+
+                    <div class="cinfo">
+                        <h5>Check out our Brother's</h5>
+                        <h4>
+                            <a style="color:gray;"href="https://jaydbb.github.io/ITSBA/" target="_blank">JEC</a>
+                            
+                            
+                        </h4>
+                    </div>
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="https:\\www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https:\\www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https:\\www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        
+                    </ul> <!-- end contact-social -->
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+
+                <div id="foot">
+                    <h1 style="color: beige; width: 500px;">JaCrime </h1>
+                   
+               <svg id="logo-foot" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M85.87906,3.44c-0.72811,0.02595 -1.42917,0.28238 -2.00219,0.73234l-68.66562,53.74328l-10.45437,8.17672c-0.96771,0.7584 -1.45721,1.97553 -1.28407,3.19276c0.17315,1.21723 0.98263,2.24958 2.12344,2.70805c1.14081,0.45847 2.43956,0.27339 3.40688,-0.4855l4.75687,-3.72219v90.45453c0.00019,1.89978 1.54022,3.43981 3.44,3.44h137.6c1.89978,-0.00019 3.43981,-1.54022 3.44,-3.44v-90.45453l4.75687,3.72219c0.96733,0.75884 2.26605,0.94389 3.40682,0.48541c1.14077,-0.45847 1.95024,-1.4908 2.1234,-2.708c0.17316,-1.2172 -0.3163,-2.43431 -1.28396,-3.19273l-10.26625,-8.02891l-68.85375,-53.89109c-0.63824,-0.50113 -1.43308,-0.76052 -2.24406,-0.73234zM86,11.24719l65.36,51.14984v92.40297h-130.72v-92.40297zM61.92,51.6c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM72.24,51.6c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM82.56,55.04c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM55.04,58.48c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM105.00735,59.74313l-19.46422,19.46422l10.15875,10.15875c-1.53711,7.22482 0.24987,14.84318 5.65047,20.24359c8.82297,8.82266 23.57594,8.04953 32.84125,-1.21609c9.26531,-9.26563 10.03907,-24.01187 1.21609,-32.83453c-5.4006,-5.40041 -13.01883,-7.19455 -20.24359,-5.65719zM89.44,61.92c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM55.04,68.8c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM100.14297,70.90297c0.88021,-0.00043 1.76139,0.33529 2.43219,1.00781c1.34137,1.33794 1.34078,3.50505 0.00672,4.85094c-0.00333,0.00333 -0.0101,0.01011 -0.01344,0.01344c-0.00345,0.00345 -0.00327,0.00999 -0.00672,0.01344c-1.34609,1.33134 -3.5139,1.32702 -4.85094,-0.01344c-1.34504,-1.34504 -1.34504,-3.52277 0,-4.86437c0.67252,-0.6708 1.55198,-1.00738 2.43219,-1.00781zM119.325,76.22422c4.17581,-0.19153 8.24295,1.22196 11.22031,4.19922c5.95473,5.95452 5.63917,16.25027 -1.2161,23.10578c-6.85527,6.8555 -17.15777,7.17061 -23.1125,1.2161c-5.95472,-5.95452 -5.63917,-16.25028 1.2161,-23.10578c3.42763,-3.42775 7.71638,-5.22378 11.89219,-5.41531zM58.48,79.12c-1.89986,0 -3.44,1.54014 -3.44,3.44c0,1.89986 1.54014,3.44 3.44,3.44c1.89986,0 3.44,-1.54014 3.44,-3.44c0,-1.89986 -1.54014,-3.44 -3.44,-3.44zM44.72,89.44v14.36469c-6.19678,4.02158 -10.32,10.67704 -10.32,18.31531c0,12.47735 10.97665,22.36 24.08,22.36c13.10335,0 24.08,-9.88265 24.08,-22.36c0,-7.63827 -4.12322,-14.29374 -10.32,-18.31531v-14.36469zM58.48,92.88c1.89888,0 3.44,1.54112 3.44,3.44c0,1.89888 -1.54112,3.44 -3.44,3.44c-1.89888,0 -3.44,-1.54112 -3.44,-3.44c0,-1.89888 1.54112,-3.44 3.44,-3.44zM58.48,106.64c9.69498,0 17.2,7.05889 17.2,15.48c0,8.42111 -7.50502,15.48 -17.2,15.48c-9.69498,0 -17.2,-7.05889 -17.2,-15.48c0,-8.42111 7.50502,-15.48 17.2,-15.48z"></path></g></g></svg>
+</div>
+            </div>
+
+            
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright JaCrime 2017</span> 
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
